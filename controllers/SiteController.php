@@ -23,7 +23,10 @@ class SiteController extends Controller
                 'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => [
+                            'authorize',
+                            'logout'
+                        ],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -124,5 +127,15 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    /**
+     * Displays our custom login page
+     *
+     * @return string
+     */
+    public function actionAuthorize()
+    {
+        return $this->render('authorize');
     }
 }
