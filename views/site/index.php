@@ -2,52 +2,24 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'VK Bot admin panel';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<div class="main-page">
+    <div class="textarea-container">
+        <span>Текст 1:</span>
+        <textarea name="text1" required>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl dapibus, molestie nisl vitae, elementum neque. Cras blandit efficitur est, non sagittis turpis auctor a. Praesent auctor auctor iaculis. Praesent tortor ante, ullamcorper in faucibus ac, vulputate nec enim. Phasellus pellentesque sagittis nisi vitae sollicitudin</textarea>
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
+    <div class="textarea-container">
+        <span>Текст 2:</span>
+        <textarea name="text2" required>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl dapibus, molestie nisl vitae, elementum neque. Cras blandit efficitur est, non sagittis turpis auctor a. Praesent auctor auctor iaculis. Praesent tortor ante, ullamcorper in faucibus ac, vulputate nec enim. Phasellus pellentesque sagittis nisi vitae sollicitudin</textarea>
     </div>
+    <div class="textarea-container">
+        <span>Текст 3:</span>
+        <textarea name="text3" required></textarea>
+    </div>
+    <div class="textarea-container">
+        <span>Ссылка:</span>
+        <textarea name="link" required></textarea>
+    </div>
+    <button class="action-btn">Сохранить</button>
 </div>
