@@ -26,7 +26,20 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-Форма логина
+<div class="logon">
+    <div class="row">
+        <div class="name">Логин: </div>
+        <input type="text" autocomplete="username-admin" required />
+    </div>
+    <div class="row">
+        <div class="name">Пароль: </div>
+        <input type="password" name="password-admin" autocomplete="current-password-admin" required />
+    </div>
+    <div class="row">
+        <p class="message"><span>Неверный логин/пароль.</span></p> <!-- место для ошибки -->
+        <input type="button" value="Вход" class="button-send" />
+    </div>
+</div>
 
 
 <?php $this->endBody() ?>

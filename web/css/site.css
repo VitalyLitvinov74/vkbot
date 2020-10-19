@@ -150,9 +150,55 @@ a.desc:after {
     outline: none;
     float: right;
 }
-.action-btn:hover{
+.action-btn:hover {
     background-color: #cc061a;
 }
 .action-btn:active {
     background-color: #b30517;
+}
+/* Login */
+.back-container{
+	opacity: 0.5;
+	background-color: grey;
+	height: 100%;
+}
+.logon {
+    width: 400px;
+    margin: 20% auto;
+	background-color: white;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	border: 1px solid darkgrey;
+	border-radius: 8px;
+	padding: 20px;
+}
+.logon * {
+	font-size: 16px;
+}
+.row {	
+    flex: auto;	
+    padding: 10px;
+    display: table;
+}
+.name {
+    float: left;
+    width: 100px;
+}
+.logon input:not(.button-send) {
+    width: 300px;
+    outline: none;
+}	
+.button-send {
+	width: 60px;
+	height: 30px;
+}
+.message {
+	color: red;
+	display: table-cell;
+	width: 340px;
+}
+.error{
+	background-color: red;
 }
