@@ -1,0 +1,22 @@
+{
+  "name": "rg",
+  "version": "1.5.5",
+  "description": "",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@types/node": "^13.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.realgrace.me/Zefirka/librg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

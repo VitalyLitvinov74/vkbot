@@ -1,0 +1,26 @@
+{
+  "name": "tg",
+  "version": "1.2.1",
+  "description": "",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "rg-web": "^1.0.3",
+    "rg": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.realgrace.me/Zefirka/tg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

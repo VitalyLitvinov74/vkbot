@@ -1,0 +1,29 @@
+[00:37:49] Error: Telegram API Error  { code: 4, http_status_code: 502, message: 'Bad Gateway' }
+[00:37:49] Error: Telegram API long poll problem. Code: 4
+Bad Gateway
+[00:37:53] Error: Telegram API Error  { code: 4, http_status_code: 502, message: 'Bad Gateway' }
+[00:37:53] Error: Telegram API long poll problem. Code: 4
+Bad Gateway
+[00:37:57] Error: Telegram API Error  { code: 4, http_status_code: 502, message: 'Bad Gateway' }
+[00:37:57] Error: Telegram API long poll problem. Code: 4
+Bad Gateway
+[19:00:24] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async VKBot.poll (/root/groupbot/dist/vkbot.js:72:35)
+[19:00:24] Error: {
+  error_code: 10,
+  error_msg: 'Internal server error',
+  request_params: [Array]
+}
+[20:57:17] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async VKBot.poll (/root/groupbot/dist/vkbot.js:72:35)
+[20:57:17] Error: {
+  error_code: 10,
+  error_msg: 'Internal server error',
+  request_params: [Array]
+}
