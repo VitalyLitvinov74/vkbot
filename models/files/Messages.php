@@ -74,7 +74,7 @@ class Messages
         $result = false;
         if(file_exists($botDir)){
             $fp = fopen($botDir . '/' . 'storage.json' , 'w+');
-            $result = fwrite($fp, json_encode($messages));
+            $result = fwrite($fp, json_encode($messages, JSON_UNESCAPED_UNICODE));
             $result = fclose($fp);
         }
         if($result!==false){
