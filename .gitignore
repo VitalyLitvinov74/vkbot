@@ -27,13 +27,21 @@ nbproject
 /groupbot7/storage.json
 
 
-/groupbot
-/groupbot2
-/groupbot3
-/groupbot4
-/groupbot5
-/groupbot6
-/groupbot7
+/groupbot/sniffedusers.txt
+/groupbot2/sniffedusers.txt
+/groupbot3/sniffedusers.txt
+/groupbot4/sniffedusers.txt
+/groupbot5/sniffedusers.txt
+/groupbot6/sniffedusers.txt
+/groupbot7/sniffedusers.txt
+
+/groupbot/sniff.txt
+/groupbot2/sniff.txt
+/groupbot3/sniff.txt
+/groupbot4/sniff.txt
+/groupbot5/sniff.txt
+/groupbot6/sniff.txt
+/groupbot7/sniff.txt
 # windows thumbnail cache
 Thumbs.db
 
