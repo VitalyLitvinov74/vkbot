@@ -1,0 +1,207 @@
+[00:06:08] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[00:06:08] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[00:37:33] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[00:37:33] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[01:09:02] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[01:09:02] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[01:40:43] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[01:40:43] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[02:12:15] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[02:12:15] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[02:43:55] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[02:43:55] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[03:15:26] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[03:15:26] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[03:47:05] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[03:47:05] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[04:18:34] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[04:18:34] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[04:50:03] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[04:50:03] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[05:21:37] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[05:21:37] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[05:53:18] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[05:53:18] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[06:25:06] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[06:25:06] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[06:56:44] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[06:56:44] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[07:28:33] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[07:28:33] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[08:00:16] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[08:00:16] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[08:32:07] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[08:32:07] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[09:04:13] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[09:04:13] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[09:36:19] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[09:36:19] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[10:07:49] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[10:07:49] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[10:39:52] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[10:39:52] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[11:12:01] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[11:12:01] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}
+[11:43:11] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[11:43:11] Error: {
+  error_code: 901,
+  error_msg: "Can't send messages for users without permission",
+  request_params: [Array]
+}

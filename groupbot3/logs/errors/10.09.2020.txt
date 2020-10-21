@@ -1,0 +1,20 @@
+[09:57:48] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async VKBot.poll (/root/groupbot3/dist/vkbot.js:72:35)
+[09:57:48] Error: {
+  error_code: 10,
+  error_msg: 'Internal server error',
+  request_params: [Array]
+}
+[11:42:41] Error: Error: An error has occurred:
+    at VKBot.request (/root/groupbot3/dist/vkbot.js:54:27)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async VKBot.poll (/root/groupbot3/dist/vkbot.js:72:35)
+[11:42:41] Error: {
+  error_code: 10,
+  error_msg: 'Internal server error',
+  request_params: [Array]
+}

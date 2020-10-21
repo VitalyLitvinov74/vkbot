@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"lib": ["es6"],
+		"module": "commonjs",
+		"target": "ES2020",
+		"outDir": "dist",
+		"rootDir": "src",
+		"allowJs": true,
+		"alwaysStrict": true,
+		"baseUrl": "./src",
+		"paths": {
+			"*": ["../node_modules/*"],
+		}
+	},
+	"include": ["./src"]
+}

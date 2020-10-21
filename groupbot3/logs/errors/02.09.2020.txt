@@ -1,0 +1,13 @@
+[10:29:21] Error: Telegram API Error  { code: 4, http_status_code: 502, message: 'Bad Gateway' }
+[10:29:21] Error: Telegram API long poll problem. Code: 4
+Bad Gateway
+[10:43:34] Error: Telegram API Error  {
+  code: 4,
+  http_status_code: 429,
+  message: 'Too Many Requests: retry after 5'
+}
+[10:43:34] Error: Telegram API long poll problem. Code: 4
+Too Many Requests: retry after 5
+[10:43:38] Error: Telegram API Error  { code: 4, http_status_code: 502, message: 'Bad Gateway' }
+[10:43:38] Error: Telegram API long poll problem. Code: 4
+Bad Gateway
