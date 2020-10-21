@@ -61,12 +61,8 @@ class AdminController extends Controller
      */
     public function actionIndex()
     {
-        if(Yii::$app->user->isGuest){
-            return $this->render('login', [
-                'model' => new LoginForm()
-            ]);
-        }
-        return $this->goHome();
+        $this->layout = false;
+        return $this->render('index');
     }
 
     /**
