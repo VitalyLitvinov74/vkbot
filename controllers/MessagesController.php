@@ -6,6 +6,7 @@ use Yii;
 use app\models\tables\Messages;
 use yii\data\ActiveDataProvider;
 use yii\data\ArrayDataProvider;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -63,7 +64,7 @@ class MessagesController extends Controller
     public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => new Messages($this->findModel($id)),
         ]);
     }
 
@@ -74,8 +75,9 @@ class MessagesController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Messages();
+        //пока пустой.
 
+        $model = new Messages();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -94,9 +96,8 @@ class MessagesController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model = new Messages($this->findModel($id));
+        if ($model->load(Yii::$app->request->post()) and $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -126,12 +127,11 @@ class MessagesController extends Controller
      * @return Messages the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($id): array
     {
-        if (($model = Messages::findOne($id)) !== null) {
+        if (($model = \app\models\files\Messages::findOne('groupbot', $id)) !== []) {
             return $model;
         }
-
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

@@ -4,6 +4,7 @@
 namespace app\models\files;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * @property string $botName - имя папки бота.
@@ -40,7 +41,7 @@ class Messages
      */
     private function mapping(array $array): array {
         $return_array = [];
-        $id = 1;
+        $id = 0;
         foreach ($array as $key=>$value){
             $return_array[] = [
               'id'=>$id,
@@ -51,5 +52,34 @@ class Messages
             $id++;
         }
         return $return_array;
+    }
+
+    /**
+     * @param string $botName - имя бота в котором нужно искать.
+     * @param int $id - начиная с 0
+     * @return mixed
+     */
+    public static function findOne(string $botName, int $id): array{
+        $messages = new self($botName);
+        $messages = $messages->all();
+        if (isset($messages[$id])) {
+            return $messages[$id];
+        }
+        return [];
+    }
+
+    public function save(array $messages): bool{
+
+        $botDir = Yii::getAlias('@app/' . $this->botName);
+        $result = false;
+        if(file_exists($botDir)){
+            $fp = fopen($botDir . '/' . 'storage.json' , 'w+');
+            $result = fwrite($fp, json_encode($messages));
+            $result = fclose($fp);
+        }
+        if($result!==false){
+            return true;
+        }
+        return $result;
     }
 }
