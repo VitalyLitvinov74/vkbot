@@ -10,7 +10,7 @@ nbproject
 .settings
 
 
-/groupbot1/logs/
+/groupbot/logs/
 /groupbot2/logs/
 /groupbot3/logs/
 /groupbot4/logs/
@@ -18,6 +18,13 @@ nbproject
 /groupbot6/logs/
 /groupbot7/logs/
 
+/groupbot/storage.json
+/groupbot2/storage.json
+/groupbot3/storage.json
+/groupbot4/storage.json
+/groupbot5/storage.json
+/groupbot6/storage.json
+/groupbot7/storage.json
 # windows thumbnail cache
 Thumbs.db
 
