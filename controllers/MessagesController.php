@@ -68,9 +68,9 @@ class MessagesController extends Controller
      * Lists all Messages models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex(string $botName)
     {
-        $messages = new \app\models\files\Messages('groupbot');
+        $messages = new \app\models\files\Messages($botName);
         $dataProvider = new ArrayDataProvider(
             [
                 'allModels'=>$messages->all(),
@@ -85,6 +85,7 @@ class MessagesController extends Controller
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'botName'=>$botName
         ]);
     }
 
@@ -94,10 +95,11 @@ class MessagesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionView($id, $botName)
     {
         return $this->render('view', [
-            'model' => new Messages($this->findModel($id)),
+            'model' => new Messages($this->findModel($botName, $id)),
+            'botName'=>$botName
         ]);
     }
 
@@ -126,15 +128,16 @@ class MessagesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $botName)
     {
-        $model = new Messages($this->findModel($id));
+        $model = new Messages($this->findModel($botName,$id));
         if ($model->load(Yii::$app->request->post()) and $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'botName'=>$botName]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'botName'=>$botName
         ]);
     }
 
@@ -156,12 +159,13 @@ class MessagesController extends Controller
      * Finds the Messages model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Messages the loaded model
+     * @param $botName - имя бота
+     * @return array the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id): array
+    protected function findModel($botName, $id): array
     {
-        if (($model = \app\models\files\Messages::findOne('groupbot', $id)) !== []) {
+        if (($model = \app\models\files\Messages::findOne($botName, $id)) !== []) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');

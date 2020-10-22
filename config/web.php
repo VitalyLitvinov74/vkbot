@@ -13,7 +13,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'defaultRoute' => 'admin/index',
-    'homeUrl'=>['messages/index'],
+    'homeUrl'=>['messages/bots'],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -62,6 +62,21 @@ $config = [
                     'route' => 'admin/login',
                     'suffix' => ''
                 ],
+                [
+                    'pattern'=>'<botName>/messages',
+                    'route'=>'messages/index',
+                    'suffix' => ''
+                ],
+                [
+                    'pattern'=>'<botName>/messages/update/<id>',
+                    'route'=>'messages/update',
+                    'suffix' => ''
+                ],
+                [
+                    'pattern'=>'<botName>/messages/<id>',
+                    'route'=>'messages/view',
+                    'suffix' => ''
+                ]
             ],
         ],
 

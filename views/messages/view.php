@@ -6,9 +6,10 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\tables\Messages */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Messages', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'View message: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'bots', 'url' => ['messages/bots']];
+$this->params['breadcrumbs'][] = ['label' => $botName, 'url'=>['messages/index', 'botName'=>$botName]];
+$this->params['breadcrumbs'][] = "View";
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="messages-view">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Update', ['update', 'botName'=>$model->bot_id, 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
 <!--        --><?//= Html::a('Delete', ['delete', 'id' => $model->id], [
 //            'class' => 'btn btn-danger',
 //            'data' => [
