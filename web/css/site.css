@@ -113,3 +113,12 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.glyphicon {
+    font-size: 18px;
+}
+td > a:first-child > .glyphicon {
+    margin-bottom: 12px;
+}
+td:nth-child(4) {
+    text-align: center;
+}
