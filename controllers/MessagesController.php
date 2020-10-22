@@ -6,6 +6,7 @@ use Yii;
 use app\models\tables\Messages;
 use yii\data\ActiveDataProvider;
 use yii\data\ArrayDataProvider;
+use yii\filters\AccessControl;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -28,7 +29,39 @@ class MessagesController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access'=>[
+                'class' => AccessControl::className(),
+                'rules'=>[
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return !Yii::$app->user->isGuest;
+                        }
+                    ]
+                ],
+            ]
         ];
+    }
+
+    public function actionBots(){
+        $arr = [];
+        foreach (glob(Yii::getAlias('@app')."/groupbot*") as $key=>$filename) {
+            $arr[] = [
+                'id'=>$key,
+                'botName'=> basename($filename)
+            ];
+        }
+        $dataProvider = new ArrayDataProvider([
+            'allModels'=>$arr,
+            'pagination' => [
+                'pageSize' => 30,
+            ],
+            'sort'=>[
+                'attributes'=> ['id', 'botName']
+            ],
+        ]);
+        return $this->render('bots', compact('dataProvider'));
     }
 
     /**

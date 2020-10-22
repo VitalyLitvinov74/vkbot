@@ -13,6 +13,7 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'defaultRoute' => 'admin/index',
+    'homeUrl'=>['messages/index'],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -24,6 +25,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['admin/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -50,9 +52,16 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-//                [
-//                    'pattern'=>''
-//                ]
+                [
+                    'pattern' => 'admin',
+                    'route' => 'admin/login',
+                    'suffix' => ''
+                ],
+                [
+                    'pattern' => 'admin/index',
+                    'route' => 'admin/login',
+                    'suffix' => ''
+                ],
             ],
         ],
 
