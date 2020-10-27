@@ -18,6 +18,8 @@ nbproject
 /groupbot6/logs/
 /groupbot7/logs/
 
+/test-postback/node_modules/*
+/postback-sargis/node_modules/*
 /groupbot/storage.json
 /groupbot2/storage.json
 /groupbot3/storage.json
