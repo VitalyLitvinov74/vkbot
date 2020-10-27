@@ -6,6 +6,7 @@ use Yii;
 use app\models\tables\Messages;
 use yii\data\ActiveDataProvider;
 use yii\data\ArrayDataProvider;
+use yii\filters\AccessControl;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -28,16 +29,48 @@ class MessagesController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access'=>[
+                'class' => AccessControl::className(),
+                'rules'=>[
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return !Yii::$app->user->isGuest;
+                        }
+                    ]
+                ],
+            ]
         ];
+    }
+
+    public function actionBots(){
+        $arr = [];
+        foreach (glob(Yii::getAlias('@app')."/groupbot*") as $key=>$filename) {
+            $arr[] = [
+                'id'=>$key,
+                'botName'=> basename($filename)
+            ];
+        }
+        $dataProvider = new ArrayDataProvider([
+            'allModels'=>$arr,
+            'pagination' => [
+                'pageSize' => 30,
+            ],
+            'sort'=>[
+                'attributes'=> ['id', 'botName']
+            ],
+        ]);
+        return $this->render('bots', compact('dataProvider'));
     }
 
     /**
      * Lists all Messages models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex(string $botName)
     {
-        $messages = new \app\models\files\Messages('groupbot');
+        $messages = new \app\models\files\Messages($botName);
         $dataProvider = new ArrayDataProvider(
             [
                 'allModels'=>$messages->all(),
@@ -52,6 +85,7 @@ class MessagesController extends Controller
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'botName'=>$botName
         ]);
     }
 
@@ -61,10 +95,11 @@ class MessagesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($id)
+    public function actionView($id, $botName)
     {
         return $this->render('view', [
-            'model' => new Messages($this->findModel($id)),
+            'model' => new Messages($this->findModel($botName, $id)),
+            'botName'=>$botName
         ]);
     }
 
@@ -93,15 +128,16 @@ class MessagesController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $botName)
     {
-        $model = new Messages($this->findModel($id));
+        $model = new Messages($this->findModel($botName,$id));
         if ($model->load(Yii::$app->request->post()) and $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'botName'=>$botName]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'botName'=>$botName
         ]);
     }
 
@@ -123,12 +159,13 @@ class MessagesController extends Controller
      * Finds the Messages model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Messages the loaded model
+     * @param $botName - имя бота
+     * @return array the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id): array
+    protected function findModel($botName, $id): array
     {
-        if (($model = \app\models\files\Messages::findOne('groupbot', $id)) !== []) {
+        if (($model = \app\models\files\Messages::findOne($botName, $id)) !== []) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');
